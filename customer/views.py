@@ -35,7 +35,7 @@ class GetCustomerSerializers(APIView):
      # Create your views here.
 class CustomerDetailAddressView(APIView):
     def get(self,request,pk):
-        instance=Customers.objects.filter()
+        instance=Customers.objects.filter(pk)
         scr=CustomerDetailAddressSerializer(instance,many=True)
         return Response(scr.data)
    
